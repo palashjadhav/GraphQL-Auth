@@ -47,9 +47,7 @@ const mutations = new GraphQLObjectType({
         logout: {
             type: AdminType,
             resolve(parentValue, args, req) {
-                console.log(req.cookies);
-                const { user } = req;
-                req.logout();
+
                 return user;
             }
         },
